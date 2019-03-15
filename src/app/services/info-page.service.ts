@@ -9,14 +9,20 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class InfoPageService {
+  info:any={};
+  cargada=false;
 
-  constructor(private http:HttpClient) {
+  constructor( private http: HttpClient ) {
+  
     console.log("SE ha cargado la pagina");
 
 
    
     this.http.get('assets/data/data-pagina.json').subscribe(resp=>{
-      console.log(resp['twitter']);
+      this.cargada=true;
+      this.info=resp;
+       //console.log(resp['twitter']);
+       console.log(resp);
       
     });
    }
