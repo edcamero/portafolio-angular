@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-certificados',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CertificadosComponent implements OnInit {
 
-  constructor() { }
+  constructor(public productoS:ProductosService) { }
 
   ngOnInit() {
   }
