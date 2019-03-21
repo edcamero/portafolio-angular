@@ -28,7 +28,7 @@ export class InfoPageService {
       this.info=resp;
 
        //console.log(resp['twitter']);
-       console.log(resp);
+       //console.log(resp);
       
     });
    }

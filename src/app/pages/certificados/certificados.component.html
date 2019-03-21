@@ -3,7 +3,7 @@
     
     <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
 
-      <a *ngFor='let producto of  productoS.producto' routerLink="item.html" class="animated fadeIn rk-item ae-masonry__item">
+      <a *ngFor='let producto of  productoS.productos' [routerLink]="['/item',producto.cod]" class="animated fadeIn rk-item ae-masonry__item">
       <img src="assets/productos/{{producto.url}}.jpg" alt="">
         <div class=" item-meta">
           <h2>{{producto.titulo}}</h2>

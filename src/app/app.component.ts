@@ -9,6 +9,6 @@ import { ProductosService } from './services/productos.service';
 })
 export class AppComponent {
   constructor(public infoPage:InfoPageService,public infoProducto:ProductosService){
-        console.log("hola");
+        //console.log("hola");
   }
 }

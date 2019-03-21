@@ -9,6 +9,7 @@ import { CertificadosComponent } from './pages/certificados/certificados.compone
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './pages/search/search.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CertificadosComponent,
     AboutComponent,
-    ItemComponent
+    ItemComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
