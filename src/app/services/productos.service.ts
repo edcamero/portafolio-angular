@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../interfaces/producto.interface';
-import { resolve } from 'dns';
+
 
 @Injectable({
   providedIn: 'root'
@@ -59,7 +59,7 @@ export class ProductosService {
     
     this.productos.forEach(prod=>{
       const titulo=prod.titulo;
-      if( prod.categoria.indexOf(termino)>=0||titulo.indexOf(termino)>=0){
+      if( prod.categoria.indexOf(termino)>=0||prod.titulo.indexOf(termino)>=0){
         this.productosFil.push(prod)
       }
     })
