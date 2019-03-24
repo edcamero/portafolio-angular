@@ -261,7 +261,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n  <section class=\"ae-container-fluid ae-container-fluid--inner rk-portfolio\">\n    \n    <div class=\"ae-masonry ae-masonry-md-2 ae-masonry-xl-4\">\n\n      <a *ngFor='let producto of  productoS.productos' [routerLink]=\"['/item',producto.cod]\" class=\"animated fadeIn rk-item ae-masonry__item\">\n      <img src=\"assets/productos/{{producto.url}}.jpg\" alt=\"\">\n        <div class=\" item-meta\">\n          <h2>{{producto.titulo}}</h2>\n          <p>{{producto.categoria}}</p>\n        </div>\n      \n      </a>\n      \n     \n    </div>\n  </section>\n"
+module.exports = "\r\n  <section class=\"ae-container-fluid ae-container-fluid--inner rk-portfolio\">\r\n    \r\n    <div class=\"ae-masonry ae-masonry-md-2 ae-masonry-xl-4\">\r\n\r\n      <a *ngFor='let certificado of  certificadoS.certificados' [routerLink]=\"['/item',certificado.id]\" class=\"animated fadeIn rk-item ae-masonry__item\">\r\n      <img src=\"assets/img/certificados/cert_{{certificado.id}}.jpg\" alt=\"\">\r\n        <div class=\" item-meta\">\r\n          <h2>{{certificado.tema}}</h2>\r\n          <p>{{certificado.descripcion}}</p>\r\n        </div>\r\n      \r\n      </a>\r\n      \r\n     \r\n    </div>\r\n  </section>\r\n"
 
 /***/ }),
 
@@ -288,13 +288,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CertificadosComponent", function() { return CertificadosComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_services_productos_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/productos.service */ "./src/app/services/productos.service.ts");
+/* harmony import */ var src_app_services_certificados_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/certificados.service */ "./src/app/services/certificados.service.ts");
 
 
 
 var CertificadosComponent = /** @class */ (function () {
-    function CertificadosComponent(productoS) {
-        this.productoS = productoS;
+    function CertificadosComponent(certificadoS) {
+        this.certificadoS = certificadoS;
     }
     CertificadosComponent.prototype.ngOnInit = function () {
     };
@@ -304,7 +304,7 @@ var CertificadosComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./certificados.component.html */ "./src/app/pages/certificados/certificados.component.html"),
             styles: [__webpack_require__(/*! ./certificados.component.scss */ "./src/app/pages/certificados/certificados.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_productos_service__WEBPACK_IMPORTED_MODULE_2__["ProductosService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_certificados_service__WEBPACK_IMPORTED_MODULE_2__["CertificadosService"]])
     ], CertificadosComponent);
     return CertificadosComponent;
 }());
@@ -446,6 +446,53 @@ var SearchComponent = /** @class */ (function () {
             src_app_services_productos_service__WEBPACK_IMPORTED_MODULE_3__["ProductosService"]])
     ], SearchComponent);
     return SearchComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/certificados.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/services/certificados.service.ts ***!
+  \**************************************************/
+/*! exports provided: CertificadosService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CertificadosService", function() { return CertificadosService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var CertificadosService = /** @class */ (function () {
+    function CertificadosService(http) {
+        this.http = http;
+        this.certificados = [];
+        this.cargado = false;
+        this.cargarCertificados();
+    }
+    CertificadosService.prototype.cargarCertificados = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.http.get('https://bd-portafolio-187fe.firebaseio.com/certificados.json').subscribe(function (resp) {
+                _this.certificados = resp;
+                _this.cargado = false;
+                resolve();
+                //console.log(resp)
+            });
+        });
+    };
+    CertificadosService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], CertificadosService);
+    return CertificadosService;
 }());
 
 
