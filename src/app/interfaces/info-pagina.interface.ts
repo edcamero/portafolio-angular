@@ -1,9 +1,10 @@
 
 export interface InfoPagina {
-  titulo?: string;
-  email?: string;
-  alias?: string;
-  facebook?: string;
-  twitter?: string;
-  instagram?: string;
+  titulo: string;
+  sobremi: string;
+  email: string;
+  alias: string;
+  facebook: string;
+  twitter: string;
+  instagram: string;
 }
