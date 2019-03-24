@@ -3,11 +3,11 @@
     
     <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
 
-      <a *ngFor='let producto of  productoS.productos' [routerLink]="['/item',producto.cod]" class="animated fadeIn rk-item ae-masonry__item">
-      <img src="assets/productos/{{producto.url}}.jpg" alt="">
+      <a *ngFor='let certificado of  certificadoS.certificados' [routerLink]="['/item',certificado.id]" class="animated fadeIn rk-item ae-masonry__item">
+      <img src="assets/img/certificados/cert_{{certificado.id}}.jpg" alt="">
         <div class=" item-meta">
-          <h2>{{producto.titulo}}</h2>
-          <p>{{producto.categoria}}</p>
+          <h2>{{certificado.tema}}</h2>
+          <p>{{certificado.descripcion}}</p>
         </div>
       
       </a>
