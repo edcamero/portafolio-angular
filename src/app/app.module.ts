@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './pages/search/search.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SearchComponent } from './pages/search/search.component';
     CertificadosComponent,
     AboutComponent,
     ItemComponent,
-    SearchComponent
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
