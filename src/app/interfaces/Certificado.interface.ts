@@ -1,6 +1,6 @@
 export interface Certificado {
-  categoria: string;
-  cod: string;
-  titulo: string;
-  url: string;
+  descripcion: string;
+  id: number;
+  tema: string;
+  tiempo: string;
 }

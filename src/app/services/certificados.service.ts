@@ -28,4 +28,10 @@ export class CertificadosService {
 
 
   }
+
+  public getCertificado(id:string){
+    return this.http.get(`https://bd-portafolio-187fe.firebaseio.com/certificados/${id}.json`);
+    
+
+  }
 }

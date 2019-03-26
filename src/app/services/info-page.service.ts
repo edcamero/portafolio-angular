@@ -10,7 +10,7 @@ import { InfoPagina } from '../interfaces/info-pagina.interface';
 })
 
 export class InfoPageService {
-  info:InfoPagina={};
+  public info:InfoPagina={};
   cargada=false;
   equipo:any[]=[];
 
