@@ -1,3 +1,37 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@edcamero 
+edcamero
+/
+portafolio-angular
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+22
+Insights
+Settings
+We found potential security vulnerabilities in your dependencies.
+Only the owner of this repository can see this message.
+
+portafolio-angular/src/styles.css
+@edcamero
+edcamero Se agrega Acerca de mi al portafolio, llamando la informacion desde d…
+…
+Latest commit 34fbb81 on 24 Mar 2019
+ History
+ 1 contributor
+105 lines (80 sloc)  1.31 KB
+   
 
 
 
@@ -102,4 +136,3 @@ animation-name: fadeIn;
   flex: 0 0 50%;
   max-width: 50%;
 }
-

@@ -6,7 +6,7 @@ import { Certificado } from '../interfaces/Certificado.interface';
   providedIn: 'root'
 })
 export class CertificadosService {
- certificados:any[]=[];
+ certificados:Certificado[]=[];
  cargado=false;
   constructor(private http:HttpClient) { 
     this.cargarCertificados();
@@ -17,10 +17,9 @@ export class CertificadosService {
   private cargarCertificados(){
 
     return new Promise((resolve,reject )=>{
-      this.http.get('https://bd-portafolio-187fe.firebaseio.com/certificados.json').subscribe((resp:Certificado[])=>{
-        this.certificados=resp;
+      this.http.get('https://bd-portafolio-187fe.firebaseio.com/certificados.json').subscribe(resp=>{
+        this.certificados=resp as Certificado[];
         this.cargado=false;
-        resolve();
         //console.log(resp)
     })
     

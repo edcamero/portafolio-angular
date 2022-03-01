@@ -7,11 +7,11 @@ import { Certificado } from 'src/app/interfaces/Certificado.interface';
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.scss']
+  styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  certificado:Certificado;
-  id:string;
+  certificado:Certificado | undefined;
+  id:string | undefined;
 
   constructor(private route:ActivatedRoute,public cert:CertificadosService) { }
 
@@ -19,10 +19,10 @@ export class ItemComponent implements OnInit {
     this.route.params.subscribe(
       parametros=>{
         this.cert.getCertificado(parametros['id']).subscribe(
-          (cert_res:Certificado)=>{
+          (cert_res)=>{
             //console.log(productoRes)
             this.id=parametros["id"];
-            this.certificado=cert_res;
+            this.certificado=cert_res as Certificado;
           }
         )
         

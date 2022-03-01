@@ -1,14 +1,7 @@
 <section class="ae-grid au-xs-ta-center  au-lg-ta-center au-mb-4">
-   
-    
-      <div class=" item-lg-10 au-xs-ta-center ">
-
-        
-        <img  class="ae-u-bolder  " src="assets/img/certificados/cert_{{id}}.jpg" alt="">
-        <h1 class="ae-u-bolder rk-portfolio-title ">{{certificado.tema}}</h1>
-        <p class="ae-theta rk-portfolio-category ">{{certificado.descripcion}}</p>
-      </div>
-    
-  
-    
-  </section>
+  <div class=" item-lg-10 au-xs-ta-center ">
+    <img class="ae-u-bolder  " src="assets/img/certificados/cert_{{id}}.jpg" alt="">
+    <h1 class="ae-u-bolder rk-portfolio-title ">{{certificado?.tema}}</h1>
+    <p class="ae-theta rk-portfolio-category ">{{certificado?.descripcion}}</p>
+  </div>
+</section>
